@@ -92,7 +92,6 @@ int		expose_hook(t_env *e)
 		return (0);
 	if (e->m->f || e->m->b || e->m->l || e->m->r || e->m->turn || e->m->first)
 	{
-		ft_bzero(e->img->data, LARG * LONG * e->img->bpp / 8);
 		move(e);
 		e->m->first = 0;
 		v->x = 0;
@@ -124,7 +123,7 @@ int		main(int ac, char **av)
 		img.img = mlx_new_image(e.mlx, LARG, LONG);
 		img.data = mlx_get_data_addr(img.img, &img.bpp, &img.sl, &img.endian);
 		e.img = &img;
-		e.win = mlx_new_window(e.mlx, LARG, LONG, "MEOW");
+		e.win = mlx_new_window(e.mlx, LARG, LONG, "Wolf3d");
 		e.m = init();
 		mlx_expose_hook(e.win, expose_hook, &e);
 		mlx_hook(e.win, 2, 1, key_down_hook, &e);

@@ -6,7 +6,7 @@
 #    By: bciss <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/01/21 18:46:26 by bciss             #+#    #+#              #
-#    Updated: 2015/10/05 23:15:47 by bciss            ###   ########.fr        #
+#    Updated: 2015/10/08 17:36:47 by bciss            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,6 @@ $(NAME): $(OBJ)
 
 clean:
 	@echo "cleaning ..."
-	@make clean -C libft/
 	@rm -rf $(SRC:.c=.o)
 	@echo "done !"
 
